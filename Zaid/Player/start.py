@@ -5,9 +5,9 @@ from config import BOT_USERNAME
 from config import GROUP_SUPPORT, UPDATES_CHANNEL, START_PIC
 from Zaid.filters import command
 from Zaid.command import commandpro
-from pyrogram import Client, filters
+from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-
+from Zaid.main import bot as Client
 
 START_TIME = datetime.utcnow()
 START_TIME_ISO = START_TIME.replace(microsecond=0).isoformat()
@@ -36,11 +36,17 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{START_PIC}",
-        caption=f"""**A Telegram Music Bot Based Mongodb.
- Add Me To Ur Chat For and Help and And Support Click On Buttons  ...
-💞  These Features A.I Based 
+        caption=f"""A Telegram Music Bot Based PyroGram.
+
+💞 **Main Features**
+~ Support Audio + Video Stream
+~ YouTube/Local/Live/m3u8 stream support
+~ Voice Raid / Video Raid
+~ Spam, Bigspam, Raid and LoveRaid
+~ Audio And Video Download from YouTube
+
 Powered By [ᴢᴀɪᴅ ʙᴏᴛꜱ](t.me/superior_bots) ...
-**""",
+""",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -70,7 +76,7 @@ Powered By [ᴢᴀɪᴅ ʙᴏᴛꜱ](t.me/superior_bots) ...
     )
     
     
-@Client.on_message(commandpro(["/start", "/alive"]) & filters.group & ~filters.edited)
+@Client.on_message(commandpro(["/start", "/stats"]) & filters.group & ~filters.edited)
 async def start(client: Client, message: Message):
     await message.reply_photo(
         photo=f"https://telegra.ph/file/dd9ca2b2122dd68ffab0e.png",
