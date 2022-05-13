@@ -36,16 +36,16 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_photo(
         photo=f"{START_PIC}",
-        caption=f"""A Telegram Music Bot Based PyroGram.
+        caption=f"""Music bot by Vpnfast Team.
 
 💞 **Main Features**
 ~ Support Audio + Video Stream
 ~ YouTube/Local/Live/m3u8 stream support
-~ Voice Raid / Video Raid
-~ Spam, Bigspam, Raid and LoveRaid
+~ Voice / Video
+~ Spam, Bigspam
 ~ Audio And Video Download from YouTube
 
-Powered By [ᴢᴀɪᴅ ʙᴏᴛꜱ](t.me/superior_bots) ...
+Powered By [Vpnfast Team](t.me/vpnfastteam) ...
 """,
     reply_markup=InlineKeyboardMarkup(
             [
@@ -56,10 +56,10 @@ Powered By [ᴢᴀɪᴅ ʙᴏᴛꜱ](t.me/superior_bots) ...
                 ],
                 [
                     InlineKeyboardButton(
-                        "ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ", url=f"https://t.me/SUPERIOR_BOTS/160"
+                        "ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅꜱ", url=f"https://t.me/vpnfastteam"
                     ),
                     InlineKeyboardButton(
-                        "ꜱᴏᴜʀᴄᴇ ᴄᴏᴅᴇ", url="https://github.com/ITZ-ZAID/Zaid-Vc-Player"
+                        "WEBSITE", url="https://vpnfast.online"
                     )
                 ],
                 [
@@ -101,7 +101,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        " ʀᴇᴘᴏ ⚒️", url=f"https://github.com/ITZ-ZAID/Zaid-Vc-Player")
+                        " website ⚒️", url=f"https://vpnfast.online")
                 ]
             ]
         ),
